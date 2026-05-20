@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" data-view="mobile">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secretive Studio</title>
+  <meta name="description" content="Bloom Nails — bespoke nail art & beauty. Follow us for inspiration, book your appointment, and shop." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░░ FLOATING TOOLBAR ░░░ -->
+  <div class="toolbar" role="toolbar" aria-label="Page controls">
+
+    <!-- Background Music Player -->
+    <div class="music-player" id="musicPlayer">
+      <button class="music-btn" id="musicToggle" aria-label="Play background music" title="Play / Pause music">
+        <span class="music-btn__icon" id="musicIcon">▶</span>
+        <span class="music-btn__bars" aria-hidden="true" id="musicBars">
+          <span></span><span></span><span></span><span></span>
+        </span>
+      </button>
+      <div class="music-label">
+        <span class="music-label__note">♪</span>
+        <span class="music-label__title" id="musicTitle">BLACKPINK - ‘뛰어(JUMP)’</span>
+      </div>
+      <audio id="bgAudio" loop preload="none">
+        <source src="assets/music/BLACKPINK - JUMP.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <!-- View Mode Toggle -->
+    <div class="view-toggle" role="group" aria-label="View mode">
+      <button class="view-btn active" data-view="mobile" aria-pressed="true" title="Mobile preview">
+        📱
+      </button>
+      <button class="view-btn" data-view="desktop" aria-pressed="false" title="Desktop preview">
+        🖥
+      </button>
+    </div>
+  </div>
+
+  <!-- ░░░ PAGE SHELL — wraps entire app, simulates device frame ░░░ -->
+  <div class="page-shell" id="pageShell">
+
+    <!-- HERO / COVER -->
+    <header class="hero">
+      <div class="hero__cover">
+        <span class="petal petal--1" aria-hidden="true"></span>
+        <span class="petal petal--2" aria-hidden="true"></span>
+        <span class="petal petal--3" aria-hidden="true"></span>
+        <span class="petal petal--4" aria-hidden="true"></span>
+        <span class="petal petal--5" aria-hidden="true"></span>
+      </div>
+
+      <div class="hero__profile">
+        <div class="hero__avatar-wrap">
+          <span class="hero__avatar-ring" aria-hidden="true"></span>
+          <img
+            class="hero__avatar"
+            src="assets/img/profile.jpg"
+            alt="Secretive Studio profile"
+            loading="eager"
+          />
+        </div>
+        <h1 class="hero__name">Secretive Studio</h1>
+        <p class="hero__tagline"><em>Where Your Secrets Create Masterpieces</em></p>
+        <p class="hero__bio">
+          Hand-painted designs · Gel & acrylic · Extensions <br/>
+          📍 Banjarmasin &nbsp;·&nbsp; DM to book ✨
+        </p>
+        <div class="hero__badges">
+          <span class="badge">🌸 Fake Nails Size</span>
+          <span class="badge">💅 Nail Art Studio</span>
+          <span class="badge">✨ Custom Design</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- TAB NAV -->
+    <nav class="tab-nav" role="tablist" aria-label="Page sections">
+      <button class="tab-nav__btn active" role="tab" aria-selected="true" data-target="links">
+        <span class="tab-nav__icon">🔗</span> Links
+      </button>
+      <button class="tab-nav__btn" role="tab" aria-selected="false" data-target="shop">
+        <span class="tab-nav__icon">🛍</span> Shop
+      </button>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="mainContent">
+
+      <!-- LINKS SECTION -->
+      <section id="section-links" class="section section--links is-active" role="tabpanel" aria-label="Links">
+        <ul class="link-list" role="list">
+
+          <li class="hidden">
+            <a href="assets/img/qris.jpg" class="link-card__anchor image-link" aria-label="QRIS">
+              <span class="link-card__icon-wrap">🖼️</span>
+              <span class="link-card__body">
+                <strong class="link-card__title">Scan QR to Pay</strong>
+                <span class="link-card__sub">Bayar via QR</span>
+              </span>
+              <span class="link-card__arrow"></span>
+            </a>
+          </li>
+
+          <li class="link-card">
+            <a href="https://shopee.co.id/secretivestudio.id " class="link-card__anchor" aria-label="Marketplace">
+              <span class="link-card__icon-wrap">🛒</span>
+              <span class="link-card__body">
+                <strong class="link-card__title">Marketplace</strong>
+                <span class="link-card__sub">Shop nail kits, tools & accessories</span>
+              </span>
+              <span class="link-card__arrow">›</span>
+            </a>
+          </li>
+
+          <li class="link-card">
+            <a href="https://wa.me/6281528767057" class="link-card__anchor" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <span class="link-card__icon-wrap link-card__icon-wrap--wa">💬</span>
+              <span class="link-card__body">
+                <strong class="link-card__title">WhatsApp</strong>
+                <span class="link-card__sub">Book an appointment or ask us anything</span>
+              </span>
+              <span class="link-card__arrow">›</span>
+            </a>
+          </li>
+
+          <li class="link-card">
+            <a href="https://instagram.com" class="link-card__anchor" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <span class="link-card__icon-wrap link-card__icon-wrap--ig">📸</span>
+              <span class="link-card__body">
+                <strong class="link-card__title">Instagram</strong>
+                <span class="link-card__sub">@bloom.nails — daily inspo & BTS</span>
+              </span>
+              <span class="link-card__arrow">›</span>
+            </a>
+          </li>
+
+        </ul>
+        <p class="section__footer-note">More links coming soon 🌷</p>
+      </section>
+
+      <!-- SHOP SECTION — add class="hidden" to this element to hide the entire shop -->
+      <section id="section-shop" class="section section--shop hidden" role="tabpanel" aria-label="Shop">
+        <p class="section__eyebrow">Our Collection</p>
+        <h2 class="section__heading">Nail Art Gallery</h2>
+        <p class="section__sub">Tap any design to inquire</p>
+
+        <div class="shop-grid">
+
+          <article class="shop-card">
+            <div class="shop-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=400&fit=crop" alt="Sakura Bloom" loading="lazy" />
+              <div class="shop-card__overlay"><button class="shop-card__cta">Inquire</button></div>
+            </div>
+            <p class="shop-card__name">Sakura Bloom</p>
+            <p class="shop-card__price">From Rp 120K</p>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=401&fit=crop" alt="Pastel Dream" loading="lazy" />
+              <div class="shop-card__overlay"><button class="shop-card__cta">Inquire</button></div>
+            </div>
+            <p class="shop-card__name">Pastel Dream</p>
+            <p class="shop-card__price">From Rp 95K</p>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=402&fit=crop" alt="French Luxe" loading="lazy" />
+              <div class="shop-card__overlay"><button class="shop-card__cta">Inquire</button></div>
+            </div>
+            <p class="shop-card__name">French Luxe</p>
+            <p class="shop-card__price">From Rp 85K</p>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=403&fit=crop" alt="Stardust Glam" loading="lazy" />
+              <div class="shop-card__overlay"><button class="shop-card__cta">Inquire</button></div>
+            </div>
+            <p class="shop-card__name">Stardust Glam</p>
+            <p class="shop-card__price">From Rp 150K</p>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=401&h=400&fit=crop" alt="Minimal Chic" loading="lazy" />
+              <div class="shop-card__overlay"><button class="shop-card__cta">Inquire</button></div>
+            </div>
+            <p class="shop-card__name">Minimal Chic</p>
+            <p class="shop-card__price">From Rp 75K</p>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=402&h=400&fit=crop" alt="Rose Ombré" loading="lazy" />
+              <div class="shop-card__overlay"><button class="shop-card__cta">Inquire</button></div>
+            </div>
+            <p class="shop-card__name">Rose Ombré</p>
+            <p class="shop-card__price">From Rp 110K</p>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=403&h=400&fit=crop" alt="Holo Mirror" loading="lazy" />
+              <div class="shop-card__overlay"><button class="shop-card__cta">Inquire</button></div>
+            </div>
+            <p class="shop-card__name">Holo Mirror</p>
+            <p class="shop-card__price">From Rp 135K</p>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=404&h=400&fit=crop" alt="Cat Eye Effect" loading="lazy" />
+              <div class="shop-card__overlay"><button class="shop-card__cta">Inquire</button></div>
+            </div>
+            <p class="shop-card__name">Cat Eye Effect</p>
+            <p class="shop-card__price">From Rp 125K</p>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="marquee-container">
+        <div class="marquee">
+          <span class="marquee__text">✨ Creative Digital · Fake Nails · Nail Art Custom · E-Commerce ✨</span>
+          <span class="marquee__text">✨ Creative Digital · Fake Nails · Nail Art Custom · E-Commerce ✨</span>
+        </div>
+      </div>
+      <p>Made with 🌸 by <strong>Secretive Studio</strong></p>
+      <p class="site-footer__copy">© 2026 Secretive Studio. All rights reserved.</p>
+    </footer>
+
+  </div><!-- /page-shell -->
+
+  <!-- IMAGE MODAL / POP-UP -->
+  <div class="image-modal" id="imageModal" role="dialog" aria-label="Image viewer" aria-hidden="true">
+    <div class="image-modal__backdrop"></div>
+    <div class="image-modal__content">
+      <button class="image-modal__close" id="modalClose" aria-label="Close image viewer">
+        <span aria-hidden="true">✕</span>
+      </button>
+      <img class="image-modal__img" id="modalImage" src="" alt="" />
+      <div class="image-modal__actions">
+        <button type="button" class="image-modal__btn image-modal__btn--download" id="modalDownload" aria-label="Download image">
+          <img src="assets/icon/download.png" alt="" aria-hidden="true" />
+          <span class="sr-only">Download</span>
+        </button>
+        <button type="button" class="image-modal__btn image-modal__btn--share" id="modalShare" aria-label="Share image">
+          <img src="assets/icon/share.png" alt="" aria-hidden="true" />
+          <span class="sr-only">Share</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
